@@ -1,0 +1,18 @@
+{
+  "name": "ascend-robotics-tailwind",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ASCEND Robotics",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "compression": "^1.7.4",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "express-ejs-layouts": "^2.5.1",
+    "helmet": "^7.1.0"
+  }
+}
