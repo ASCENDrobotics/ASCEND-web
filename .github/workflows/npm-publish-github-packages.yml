@@ -23,17 +23,16 @@ jobs:
         with:
           node-version: 20
 
-      - run: npm ci   # installs ejs, express, etc.
+      # Use install (works without package-lock.json)
+      - name: Install deps
+        run: npm install --no-audit --no-fund
 
       - name: Build static site (no build.js)
         run: |
           mkdir -p dist
-          # Render EJS to static HTML
           npx ejs views/index.ejs > dist/index.html
           npx ejs views/404.ejs  > dist/404.html
-          # Copy public assets if present
           if [ -d public ]; then cp -R public/* dist/; fi
-          # Avoid Jekyll processing on Pages
           touch dist/.nojekyll
 
       - name: Upload artifact
