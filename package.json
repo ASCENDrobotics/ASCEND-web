@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "description": "ASCEND Robotics",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "node server.js"
+    "start": "node index.js",
+    "dev": "node index.js"
   },
   "dependencies": {
     "compression": "^1.7.4",
@@ -16,3 +16,4 @@
     "helmet": "^7.1.0"
   }
 }
+
